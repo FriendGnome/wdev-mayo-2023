@@ -1,0 +1,19 @@
+43 TB a MB
+
+43 TB * 1024 *1024 MB
+
+Si lo vuelvo a multiplicar convierto los terabites a megabites. 1 kylo byte equivale a 1024 byites. 
+
+Si multiplicamos 678 x 1024 eliminamos los mg por 1024 a bits havia que multiplicat por 
+
+10110
+
+2 a la 0 es 1 - no cuenta
+2 a la 1 es 2 - cuenta
+2 a la 2 es 4 - cuenta
+2 a la 3 es 8 - no cuenta
+2 a la 4 es 16 - cuenta
+
+1000001
+
+65
