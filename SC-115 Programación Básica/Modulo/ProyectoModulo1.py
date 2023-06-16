@@ -24,7 +24,7 @@ Nota: Al registrar un nuevo cliente, se debe validar que este no exista previame
 ⦁	Consultar un cliente: Solicitando la identificación, desplegará la información básica del cliente.
 ⦁	Venta de productos: el cliente pude vender un producto, incluyendo la información del producto, descripción y precio y quedará a la espera de la aprobación del administrador.
 ⦁	Listado de productos comprados, mediante la orden de compra, visualizará los productos adquiridos recientemente y el precio pagado.
-"""
+
 
 class Cliente:
     def __init__(self, identificacion, nombre, primer_apellido, segundo_apellido, telefono, correo, provincia, otras_senas):
@@ -210,3 +210,4 @@ class Programa:
 
 programa = Programa()
 programa.menu_principal()
+"""
