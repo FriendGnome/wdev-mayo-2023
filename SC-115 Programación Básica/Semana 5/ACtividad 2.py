@@ -5,19 +5,7 @@
 #con mi permiso pero igual quería entregar el que hize por aparte)
 
 """
-1.Elabore un programa en Python que, solicite al usuario un número entero e imprima en 
-pantalla si es un número par o impar.
-"""
-
-numero = int(input("Ingrese un número entero:"))
-
-if numero % 2 == 0:
-    print("El número es par.")
-else:
-    print("El número es impar.")
-
-"""
-Desarrolle un programa en Python para determinar el pago bruto de varios empleados de una 
+2. Desarrolle un programa en Python para determinar el pago bruto de varios empleados de una 
 empresa.  La empresa paga un “turno ordinario” por las primeras 40 horas trabajadas por cada 
 empleado y paga un “turno y medio” por las demás horas extras trabajadas, después de las primeras 
 40 horas. Su programa debe permitir solicitar la tarifa por hora del empleado, la cantidad de horas 
