@@ -1,8 +1,7 @@
 #Actividad Evaluativa 
 #Integrante: Corrales Sánchez Camilo,
 #Profesor: Salas Sevilla Oscar Francisco
-#Nota(los miembros de mi grupo usaron el punto dos de mi entrega para su grupo
-#con mi permiso pero igual quería entregar el que hize por aparte)
+
 """
 3.Elabore un programa en Python que, solicite al usuario el precio de cuatro productos diferentes y 
 tras sumarlos, si el monto es mayor a 15 mil colones, le aplique un descuento del 10%, mostrando 
