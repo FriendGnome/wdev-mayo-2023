@@ -1,11 +1,12 @@
-#Actividad Evaluativa Grupo Seis (6) Nombre del Grupo: Grupo Los Erizos
-#Integrantes: Corrales Sánchez Camilo, Luna Urbina David Guillermo, 
-#Piñas Perez Julio Andres, Hernandez Urbina Eliecer Josue
+#Actividad Evaluativa 
+#Integrante: Corrales Sánchez Camilo,
 #Profesor: Salas Sevilla Oscar Francisco
+#Nota(los miembros de mi grupo usaron el punto dos de este archivo para su grupo
+#con mi permiso pero igual quería entregar el que hize por aparte)
 
 """
-Elabore un programa en Python que, solicite al usuario un número entero e imprima en pantalla 
-si es un número par o impar.
+1.Elabore un programa en Python que, solicite al usuario un número entero e imprima en 
+pantalla si es un número par o impar.
 """
 
 numero = int(input("Ingrese un número entero:"))
@@ -17,7 +18,7 @@ else:
 
 
 """
-Desarrolle un programa en Python para determinar el pago bruto de varios empleados de una 
+2.Desarrolle un programa en Python para determinar el pago bruto de varios empleados de una 
 empresa.  La empresa paga un “turno ordinario” por las primeras 40 horas trabajadas por cada 
 empleado y paga un “turno y medio” por las demás horas extras trabajadas, después de las primeras 
 40 horas. Su programa debe permitir solicitar la tarifa por hora del empleado, la cantidad de horas 
@@ -64,7 +65,7 @@ elif opcion == 2:
 print("Gracias por usar el programa!")
 
 """
-Elabore un programa en Python que, solicite al usuario el precio de cuatro productos diferentes y 
+3.Elabore un programa en Python que, solicite al usuario el precio de cuatro productos diferentes y 
 tras sumarlos, si el monto es mayor a 15 mil colones, le aplique un descuento del 10%, mostrando 
 por pantalla el resultado final al cliente.
 """
@@ -85,7 +86,7 @@ else:
 print("Gracias por usar el programa!")
 
 """
-La tienda de ropa “Vestimentas OnLine” cuenta con una promoción en las siguientes prendas:
+4.La tienda de ropa “Vestimentas OnLine” cuenta con una promoción en las siguientes prendas:
 Pantalones, si son 2 o más pantalones, aplica un 10% de descuento.
 Camisas de vestir, si compra 2, la segunda es a mitad de precio.
 Más de 4 prendas (si son camisas o pantalones, o ambas) un 30% de descuento.
@@ -94,7 +95,7 @@ Elabore un programa en Python que, solicite al usuario el tipo de prenda que est
 de prendas, el monto individual de cada una y calcule el monto total a pagar con base en los descuentos 
 indicados anteriormente."
 """
-
+print("Bienvenidos a Vestimentas online")
 tipo_prenda = int(input("Ingrese el numero del tipo de prenda que está comprando\n" 
                         "1.pantalones.\n" 
                         "2.camisas.\n"
@@ -111,7 +112,7 @@ elif tipo_prenda == 3:
     cantidad_pantalones = int(input("Ingrese la cantidad de pantalones: "))
     monto_individual_pantalones = float(input("Ingrese el monto individual de cada pantalon: "))
 else:
-    print("No escogió un número valido.")
+    print("No escogió un número valido. El programa continuará")
 
 if tipo_prenda == 1:
     subtotal=cantidad_pantalones*monto_individual_pantalones 
