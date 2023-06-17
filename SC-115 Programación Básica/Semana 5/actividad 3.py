@@ -1,20 +1,25 @@
-#Actividad Evaluativa Grupo Seis (6) Nombre del Grupo: Grupo Los Erizos
-#Integrantes: Corrales Sánchez Camilo, Luna Urbina David Guillermo, 
-#Piñas Perez Julio Andres, Hernandez Urbina Eliecer Josue
+#Actividad Evaluativa 
+#Integrante: Corrales Sánchez Camilo,
 #Profesor: Salas Sevilla Oscar Francisco
+#Nota(los miembros de mi grupo usaron el punto dos de mi entrega para su grupo
+#con mi permiso pero igual quería entregar el que hize por aparte)
 """
-Elabore un programa en Python que, solicite al usuario el precio de cuatro productos diferentes y 
+3.Elabore un programa en Python que, solicite al usuario el precio de cuatro productos diferentes y 
 tras sumarlos, si el monto es mayor a 15 mil colones, le aplique un descuento del 10%, mostrando 
 por pantalla el resultado final al cliente.
 """
+precio1 = float(input("Ingrese el precio del primer producto: "))
+precio2 = float(input("Ingrese el precio del segundo producto: "))
+precio3 = float(input("Ingrese el precio del tercer producto: "))
+precio4 = float(input("Ingrese el precio del cuarto producto: "))
 
-print("10% de descuento por compras mayores a 15000 colones")
-art1= float(input("ingrese el precio de su articulo:"))
-art2= float(input("ingrese el precio de su articulo:"))
-art3= float(input("ingrese el precio de su articulo:"))
-art4= float(input("ingrese el precio de su articulo:"))
-subtotal= art1+art2+art3+art4
-if subtotal<=15000:
-            print("Su total a pagar es:", subtotal)
+subtotal = precio1 + precio2 + precio3 + precio4
+
+if subtotal > 15000:
+    descuento = subtotal * 0.1
+    total = subtotal - descuento
+    print("El monto total con descuento es de:", total, "colones.")
 else:
-    print("Su total a pagar es:", subtotal-(subtotal*0.10))
+    print("El monto total es de:", subtotal, "colones.")
+
+print("Gracias por usar el programa!")

@@ -1,7 +1,20 @@
-#Actividad Evaluativa Grupo Seis (6) Nombre del Grupo: Grupo Los Erizos
-#Integrantes: Corrales Sánchez Camilo, Luna Urbina David Guillermo, 
-#Piñas Perez Julio Andres, Hernandez Urbina Eliecer Josue
+#Actividad Evaluativa 
+#Integrante: Corrales Sánchez Camilo,
 #Profesor: Salas Sevilla Oscar Francisco
+#Nota(los miembros de mi grupo usaron el punto dos de mi entrega para su grupo
+#con mi permiso pero igual quería entregar el que hize por aparte)
+
+"""
+1.Elabore un programa en Python que, solicite al usuario un número entero e imprima en 
+pantalla si es un número par o impar.
+"""
+
+numero = int(input("Ingrese un número entero:"))
+
+if numero % 2 == 0:
+    print("El número es par.")
+else:
+    print("El número es impar.")
 
 """
 Desarrolle un programa en Python para determinar el pago bruto de varios empleados de una 
