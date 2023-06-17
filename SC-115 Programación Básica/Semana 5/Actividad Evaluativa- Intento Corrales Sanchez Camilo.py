@@ -19,7 +19,7 @@ else:
 
 """
 2.Desarrolle un programa en Python para determinar el pago bruto de varios empleados de una 
-empresa.  La empresa paga un “turno ordinario” por las primeras 40 horas trabajadas por cada 
+empresa.La empresa paga un “turno ordinario” por las primeras 40 horas trabajadas por cada 
 empleado y paga un “turno y medio” por las demás horas extras trabajadas, después de las primeras 
 40 horas. Su programa debe permitir solicitar la tarifa por hora del empleado, la cantidad de horas 
 trabajadas y desplegar el pago bruto del empleado.  
