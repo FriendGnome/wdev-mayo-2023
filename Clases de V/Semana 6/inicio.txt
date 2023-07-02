@@ -1,0 +1,5 @@
+Etiqueta que se llama estilos. 
+
+<style></style>
+
+ahora en adelante es una para los scripts o para javascript. 
