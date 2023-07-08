@@ -1,0 +1,31 @@
+error - es un error antes de que se compile
+
+defecto - el programa compila bien pero no está funcionando como el cliente desea o requiere. Por faltas de comunicación es algo muy común.
+
+falla - es cuando el programa no realiza la función que se espera. 
+
+Descripción amplia del software ¿Cómo funciona? - Funcionaría como un mundo virtual en 3D, accesible a través de dispositivos como smartphones, tabletas, computadoras y auriculares de realidad virtual donde puedes vivir las peliculas de netflix de una manera más immersiva. 
+
+Interfaz y menús: Al iniciar sesión, los usuarios serán recibidos en la interfaz principal de CineVerse, donde encontrarán una variedad de opciones, como "Explorar CinePortal", "CineEspectador VR", "CineMixer", "CineGather" y más. 
+
+Explorar CinePortal: Los usuarios podrán acceder a la característica más distintiva de la aplicación, el "CinePortal". Aquí, encontrarán una serie de portales interdimensionales que les permitirán viajar a mundos de películas completamente nuevos y originales. Cada portal representa una experiencia cinematográfica única con tramas y ambientaciones emocionantes. Los usuarios pueden elegir un portal y sumergirse en la historia para vivir una aventura inmersiva y emocionante. CineEspectador VR: Si los usuarios desean experimentar películas existentes de una manera completamente nueva, pueden utilizar esta función con sus auriculares de realidad virtual. Se convertirán en espectadores dentro de las películas y podrán explorar los escenarios, interactuar con los personajes y vivir la trama desde una perspectiva única.
+
+Definir la labor de cada ingeniero (que labor va a realizar cada miembro del equipo según el ciclo de vida del software) 
+
+
+7.    Definir la labor de cada ingeniero (que labor va a realizar cada miembro del equipo según el ciclo de vida del software)
+Determinacion de Requerimientos: Johanna
+Diseño de Software: Ernesto 
+Desarrollo de Software: Brandon 
+Pruebas del Software: Camilo
+Despliegue: Todos
+Operaciones:  Todos
+
+8.     Una imagen de cómo se vería la app ejemplo el menú (Canva)
+Menu
+
+9.     Exponer el trabajo a los compañeros.
+---
+
+10. Votar por la mejor propuesta de app, por medio de un formulario.
+---

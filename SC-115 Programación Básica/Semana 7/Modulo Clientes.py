@@ -1,6 +1,6 @@
 #SC-115-Programación Basica
 #Grupo los Erizos Grupo 3
-#Integrantes: Camilo Corrales, Julio Piñas, Luna Urbina, Eliecer Urbina
+#Entrega Individual Camilo Corrales
 """
 Descripción General del requerimiento Tienda en línea “Intermediación y Venta de productos”
 
@@ -72,7 +72,8 @@ while condicion == True:
     print("2. Actualizar un cliente")
     print("3. Venta de Productos")
     print("4. Listado de Productos")
-    print("5. Salir del Programa")
+    print("5. Consulta de Cliente")
+    print("6. Salir del Programa")
     opcion_menu=int(input("Ingrese la opción: "))
 
     if opcion_menu == 1:
@@ -143,8 +144,18 @@ while condicion == True:
         else:
             print("Ningun cliente ha sido registrado. Esta opción no está habilitada.")
     elif opcion_menu == 5:
+        print("Nombre del cliente:", nombre1)
+        print("Número de identificación:", identificacion1)
+        print("País:", pais1)
+        print("Provincia:", provincia1)
+        print("Canton:", canton1)
+        print("Distrito:", distrito1)
+        print("Direccion:", direccion1)
+        print("Edad:", edad1)
+        print("Forma de pago:", forma_pago1)
+    elif opcion_menu == 6:
         condicion = False
-    elif opcion_menu > 5 or opcion_menu < 1:
+    elif opcion_menu > 6 or opcion_menu < 1:
         print("Opción Invalida.")
 
 print("El programa terminará. Gracias por preferir Tienda Online el Canalito")
