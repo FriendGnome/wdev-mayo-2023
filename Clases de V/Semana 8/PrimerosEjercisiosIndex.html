@@ -35,12 +35,18 @@
                         <br>
                         <p2><strong>¿Cuánto dinero ganará esta persona después de un mes?</strong></p2>    
                         <button type="button" class="btn btn-danger" onclick="ejercicio1()">Click aquí para ver la respuesta.</button>
+                        <div>
+                          <span id="Respuesta al ejercicio 1">---</span>
+                        </div>
                       </div>
 
                       <div class="col">
                         <h1>Ejercicio 2</h1>
                         <p1>Usted va a hacer compras por 12000 colones en un comercio y el vendedor le ofrece un descuento de 1000 colones, demuestre como sería más barato el precio final, si primero le aplican el descuento y luego le cobran el 13% de impuesto que primero le carguen el 13% de impuesto y luego le hagan el descuento.</p1>
                         <button type="button" class="btn btn-danger" onclick="ejercicio2()">Click aquí para ver la respuesta.</button>
+                        <div>
+                          <span id="Respuesta al ejercicio 2">---</span>
+                        </div>
                     </div>
                       <div class="col">
                         <h1>Ejercicio 3</h1>
@@ -57,7 +63,10 @@
                                 class="form-control" name="segundovalor" id="segundovalor" aria-describedby="helpId" placeholder="">
                                 <small id="helpId" class="form-text text-muted"></small>
                             </div>
-                            <button type="button" class="btn btn-danger" onclick="ejercicio3()">Click aquí para ver la respuesta.</button> 
+                            <button type="button" class="btn btn-danger" onclick="ejercicio3()">Click aquí para ver la respuesta.</button>
+                            <div>
+                              <span id="Respuesta al ejercicio 3">---</span>
+                            </div>
                       </div>
                       <div class="col">
                         <h1>Ejercicio 4</h1>
@@ -78,6 +87,9 @@
                             <small id="helpId" class="form-text text-muted"></small>
                           </div>
                           <button type="button" class="btn btn-danger" onclick="ejercicio4()">Click aquí para ver la respuesta.</button>
+                          <div>
+                            <span id="Respuesta al ejercicio 4">---</span>
+                          </div>
                       </div>
                       <div class="col">
                         <h1>Ejercicio 5</h1>
@@ -99,6 +111,9 @@
                             <small id="helpId" class="form-text text-muted"></small>
                           </div>
                           <button type="button" class="btn btn-danger" onclick="ejercicio5()">Click aquí para ver la respuesta.</button>
+                          <div>
+                            <span id="Respuesta al ejercicio 5">---</span>
+                          </div>
                       </div>
                     </div>
                   </div>
@@ -126,14 +141,30 @@
     
   <script>
         function ejercicio1(){
-            var gananciasTotales = 70000 * 0.05 + (100000 - 70000) * 0.1;
-            alert("Después de un mes, la persona ganará:"+gananciasTotales+"dolares");
+            capitalInicial = 100000;
+            inversionBonos = 70000;
+            tasaBonos = 5;
+            inversionDeposito = capitalInicial - inversionBonos;
+            tasaDeposito = 10;
+            
+            gananciasBonos = (inversionBonos * tasaBonos) / 100;
+            gananciasDeposito = (inversionDeposito * tasaDeposito) / 100;
+            
+            gananciasTotales = gananciasBonos + gananciasDeposito;
+            respuesta1 = "Después de un mes, la persona ganará:"+gananciasTotales+"dolares";
+            document.getElementById("Respuesta al ejercicio 1").innerHTML = respuesta1;
         }
 
         function ejercicio2(){
-            var DescuentoPrimero = (12000 - 1000) + ((12000 - 1000) * 0.13);
-            var ImpuestoPrimero = (12000 + (12000 * 0.13)) - 1000;
-            alert("Aplicando el descuento primero, el precio final sería: " + DescuentoPrimero + " colones. Aplicando el impuesto primero, el precio final sería: " + ImpuestoPrimero + " colones. Basado en los cálculos realizados por la computadora, aplicar el descuento primero es más económico.");
+          precio_inicial = 12000
+          descuento = 1000
+          impuesto = 13 / 100
+
+          precio_con_descuento = precio_inicial - descuento + ((precio_inicial - descuento) * impuesto)
+          precio_con_impuesto = (precio_inicial + (precio_inicial * impuesto)) - descuento
+            
+            respuesta2 = "Aplicando el descuento primero, el precio final sería: " + precio_con_descuento + " colones. Aplicando el impuesto primero, el precio final sería: " + precio_con_impuesto + " colones. Basado en los cálculos realizados por la computadora, aplicar el descuento primero es más económico.";
+            document.getElementById("Respuesta al ejercicio 2").innerHTML = respuesta2;
         }
         function ejercicio3(){
             var valor1 = parseFloat(document.getElementById("primervalor").value)
@@ -144,10 +175,12 @@
             } else if (valor2 > valor1) {
             mayorValor = valor2;
             } else {
-            alert("Los dos valores son iguales.");
+            respuesta3="Los dos valores son iguales.";
+            document.getElementById("Respuesta al ejercicio 3").innerHTML = respuesta3;
             }
             if (mayorValor) {
-            alert("El valor mayor ingresado es: " + mayorValor);
+            respuesta3="El valor mayor ingresado es: " + mayorValor;
+            document.getElementById("Respuesta al ejercicio 3").innerHTML = respuesta3;
             }
         }
         function ejercicio4(){
@@ -156,19 +189,23 @@
             var descuento = parseFloat(document.getElementById("descuento").value);
 
             var total = precio + (precio * impuesto / 100) - (precio * descuento / 100);
-            alert("El valor total de la factura es: " + total);  
+            respuesta4="El valor total de la factura es: " + total;  
+            document.getElementById("Respuesta al ejercicio 4").innerHTML = respuesta4;
         }
         function ejercicio5(){
             var sexo = document.getElementById("sexo").value;
-            var edad = parseInt(document.getElementById("edad").value);
+            var edad = parseInt(document.getElementById("edad").value);//cambiar el alert por un spamid
             var mensaje = "";
 
              if (sexo === "hombre" && edad > 65) {
-             alert("Esta persona está en edad de pensionarse.");
+             respuesta5="Esta persona está en edad de pensionarse.";
+             document.getElementById("Respuesta al ejercicio 5").innerHTML = respuesta5;
             } else if (sexo === "mujer" && edad > 62) {
-            alert("Esta persona está en edad de pensionarse.");
+             respuesta5="Esta persona está en edad de pensionarse.";
+            document.getElementById("Respuesta al ejercicio 5").innerHTML = respuesta5;
             } else {
-            alert("Esta persona no está en edad de pensionarse.");
+             respuesta5="Esta persona no está en edad de pensionarse.";
+            document.getElementById("Respuesta al ejercicio 5").innerHTML = respuesta5;
             }  
         }
   </script>
