@@ -1,6 +1,5 @@
 #SC-115-Programación Basica
 #Avance 2 del Proyecto
-#Grupo los Erizos Grupo 3
 #Entrega Individual Camilo Corrales
 """
 Descripción General del requerimiento Tienda en línea “Intermediación y Venta de productos”
@@ -77,26 +76,26 @@ Los productos deben ser persistentes, no se deben eliminar al cerrar el programa
 
 """
 
-matriz = []
-matriz_producto = []
+arreglo = []
+arreglo_producto = []
 
 def agregar_usuario(identificacion, nombre, primer_apellido, segundo_apellido, telefono, correo, provincia, otras_señas):
-    for cliente in matriz:
+    for cliente in arreglo:
         if cliente[0] == identificacion:
             print("Este cliente ya existe previamente y no puede ser ingresado de nuevo.")
             return
 
-    matriz.append([identificacion, nombre, primer_apellido, segundo_apellido, telefono, correo, provincia, otras_señas])
+    arreglo.append([identificacion, nombre, primer_apellido, segundo_apellido, telefono, correo, provincia, otras_señas])
 
 def buscar_usuario(id_usuario):
-    if id_usuario >= len(matriz):
+    if id_usuario >= len(arreglo):
         return print("Eso no es ID de un usuario existente.")
     else:
-        return matriz[id_usuario]
+        return arreglo[id_usuario]
 
 def actualizar_cliente(id_usuario):
-    if id_usuario < len(matriz):
-        cliente_actual = matriz[id_usuario]
+    if id_usuario < len(arreglo):
+        cliente_actual = arreglo[id_usuario]
         print("Actualizando información del cliente con ID", id_usuario)
 
         identificacion = int(input("Ingrese la nueva identificacion nacional del usuario: "))
@@ -130,20 +129,20 @@ def registrar_cliente():
     provincia = input("Ingrese la provincia del usuario: ")
     otras_señas = input("Ingrese otras señas que indiquen su dirección completa:")
     agregar_usuario(identificacion, nombre, primer_apellido, segundo_apellido, telefono, correo, provincia, otras_señas)
-    id_usuario = len(matriz) - 1
+    id_usuario = len(arreglo) - 1
     print("El ID del Usuario es:", id_usuario)
     print("Por favor guarde el ID si desea consultar este usuario en el futuro.")
 
 def agregar_producto(nombre, descripcion, precio):
-    matriz_producto.append([nombre, descripcion, precio])
-    id_producto = len(matriz_producto) - 1
+    arreglo_producto.append([nombre, descripcion, precio])
+    id_producto = len(arreglo_producto) - 1
     print("ID del Producto:", id_producto)
 
 def buscar_producto(id_producto):
-    if id_producto >= len(matriz_producto):
+    if id_producto >= len(arreglo_producto):
         return print("Eso no es ID de un producto existente.")
     else:
-        return matriz_producto[id_producto]
+        return arreglo_producto[id_producto]
 
 def gestionar_productos():
     print("**** SISTEMA DE GESTION DE PRODUCTOS ****")
@@ -151,17 +150,17 @@ def gestionar_productos():
     print("2. Consultar un producto")
     print("3. Volver al menú principal")
     
-    entrada_producto = int(input("Ingrese la opción: "))
+    entrada_producto = input("Ingrese la opción: ")
     
-    if entrada_producto == 1:
+    if entrada_producto == "1":
         nombre = input("Ingrese el nombre del producto: ")
         descripcion = input("Ingrese la descripción del producto: ")
         precio = float(input("Ingrese el precio del producto: "))
         agregar_producto(nombre, descripcion, precio)
-    elif entrada_producto == 2:
+    elif entrada_producto == "2":
         id_producto = int(input("Ingrese un ID de producto para buscar información: "))
         print(buscar_producto(id_producto))
-    elif entrada_producto == 3:
+    elif entrada_producto == "3":
         return
     else:
         print("Entrada no válida. Por favor ingrese una opción válida.")
@@ -176,19 +175,19 @@ while condicion_menu:
     print("3. Actualizar un cliente")
     print("4. Ingresar al Sistema de Gestion de Productos")
     print("5. Salir del Programa")
-    entrada_usuario = int(input("Ingrese la opción:"))
+    entrada_usuario = input("Ingrese la opción:")
 
-    if entrada_usuario == 1:
+    if entrada_usuario == "1":
         registrar_cliente()
-    elif entrada_usuario == 2:
+    elif entrada_usuario == "2":
         id_usuario = int(input("Ingrese un ID de usuario para buscar información: "))
         print(buscar_usuario(id_usuario))
-    elif entrada_usuario == 3:
+    elif entrada_usuario == "3":
         id_usuario = int(input("Ingrese el ID del cliente que desea actualizar: "))
         actualizar_cliente(id_usuario)
-    elif entrada_usuario == 4:
+    elif entrada_usuario == "4":
         gestionar_productos()
-    elif entrada_usuario == 5:
+    elif entrada_usuario == "5":
         condicion_menu = False
     else:
         print("Entrada no válida. Por favor ingrese una opción válida.")
