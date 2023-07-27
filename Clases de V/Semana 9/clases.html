@@ -1,0 +1,37 @@
+<script>
+    //modulos de codigo, librerias
+    //class palabra reservada
+    class inventario{
+        constructor(id, nombre, precio, color){
+            this.id = id;
+            this.nombre = nombre;
+            this.precio = precio;
+            this.color = color;
+        }
+        setid(id){
+            this.id=id;
+        }
+
+        getid(){
+            return this.id;
+        }
+        setnombre(nombre){
+            this.nombre=nombre;
+        }
+        getnombre (){
+            return this.nombre;
+        }
+    }
+    //una clase es una variable de tipo objeto porque tiene acceso a funciones
+    //atributos a muchas cosas
+
+    const cualquier_nombre = new inventario(1, "Laptop", 1200, "Gris");
+    
+    console.log(cualquier_nombre.getid());
+
+    cualquier_nombre.setid(10202020);
+
+    console.log(cualquier_nombre.getid());
+
+    console.log(cualquier_nombre.getnombre());
+</script>

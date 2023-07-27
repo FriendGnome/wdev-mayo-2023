@@ -1,0 +1,15 @@
+Debemos intentar de nuevo. El programa no funciona como debería. 
+
+Una compañía está elaborando un programa para dispositivos móviles que permita registrar la lista de actividades de una persona durante la semana y que permita asignar nuevas tareas a cada día de la semana. Usted ha sido contratado para elaborar un programa en Python que, mediante arreglos (uno dinámico por cada día de la semana), solicite al usuario las actividades que realiza para cada día y al final imprima en pantalla los arreglos con la cantidad de actividades realizadas. Se debe usar ciclos, funciones y arreglos. Solo lo visto en clase. 
+
+La solución debería funcionar de la siguiente manera: 
+
+El programa debe darle la bienvenida al usuario. 
+
+El programa debe tener un menu que invite al usuario a ingresar actividades para el día que el usuario escoja. 1, lunes, 2, martes, 3, miercoles, etc o que le permita finalizar el programa al escojer una opción 8 que diga finalizar. 
+
+El programa debe permitir al usuario ingresar las actividades que quiera al día hasta que el usuario desee salir. El programa debe guardar estas actividades en un arreglo. 
+
+Al finalizar el programa el programa debe imprimir la cantidad de actividades ingresadas para cada día usando una funcion len en el arreglo de cada día de la semana. 
+
+Espero esto te guía en como pienso hacer el prograa

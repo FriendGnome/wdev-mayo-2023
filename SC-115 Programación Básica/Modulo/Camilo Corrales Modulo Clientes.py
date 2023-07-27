@@ -79,7 +79,7 @@ while condicion == True:
     if opcion_menu == 1:
              
             nombre = input("Ingrese el nombre del cliente: ")
-            identificacion = input("Ingrese el número de identificación: ")
+            identificacion = input("Ingrese el número de identificación nacional en la cedula de identidad: ")
             pais = input("Ingrese el país: ")
             provincia = input("Ingrese la provincia: ")
             canton = input("Ingrese el cantón: ")
