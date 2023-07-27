@@ -1,4 +1,5 @@
 #SC-115-Programación Basica
+#Avance 2 del Proyecto
 #Grupo los Erizos Grupo 3
 #Entrega Individual Camilo Corrales
 """
@@ -27,6 +28,9 @@ El local tiene transporte los cinco días a la semana, y cuenta con dos transpor
 embargo, únicamente puede realizar las entregas de una misma provincia en un mismo día y cada 
 transportista no realiza entregas a una misma provincia el mismo día.
 """
+#print("3. Venta de Productos")
+    #print("4. Listado de Productos")
+    #print("5. Consulta de Cliente")
 
 """
 Módulo de Clientes: En este módulo se podrá realizar lo siguiente:

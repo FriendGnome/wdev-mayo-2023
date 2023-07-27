@@ -22,12 +22,12 @@ function consultardatos(){
 function ajustardatostabla(datos){
     console.log("datos"+datos);
     for (const objetoindividual of datos) {
-    console.log(objetoindividual.id);
-    console.log(objetoindividual.nombre);
-    console.log(objetoindividual.descripcion);
-    console.log(objetoindividual.tiempo);
-    console.log(objetoindividual.usuario);
-    console.log("///////////");
+    //console.log(objetoindividual.id);
+    //console.log(objetoindividual.nombre);
+    //console.log(objetoindividual.descripcion);
+    //console.log(objetoindividual.tiempo);
+    //console.log(objetoindividual.usuario);
+    //console.log("///////////");
 
        tablaresultado.innerHTML += `
             <tr class="table-primary">
