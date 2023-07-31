@@ -52,7 +52,7 @@ clientes deben ser persistentes, no se deben perder al cerrar el programa.
 -Venta de productos: el cliente puede vender un producto, incluyendo la información del producto, 
 descripción y precio y quedará a la espera de la aprobación del administrador.
 
------Listado de productos comprados, mediante la orden de compra, visualizará los productos-----
+PENDING-----Listado de productos comprados, mediante la orden de compra, visualizará los productos-----PENDING
 
 """
 arreglo = []
