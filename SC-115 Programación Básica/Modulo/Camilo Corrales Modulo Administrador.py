@@ -51,30 +51,9 @@ clientes deben ser persistentes, no se deben perder al cerrar el programa.
 -Venta de productos: el cliente puede vender un producto, incluyendo la información del producto, 
 descripción y precio y quedará a la espera de la aprobación del administrador.
 
--Listado de productos comprados, mediante la orden de compra, visualizará los productos
+-----Listado de productos comprados, mediante la orden de compra, visualizará los productos-----
 
 """
-"""
-Módulo 2: Módulo de Administrador
-
-En este módulo se podrá activar los clientes, aceptar los productos de los clientes que desean vender, registrar 
-los productos propios del local y visualizar las entregas de los transportistas.
-
-La información para el registro de un producto del local debe contener como mínimo los siguientes datos (puede incluir más según se requiere en su análisis):
-
-Identificación del producto.
-Nombre del producto.
-Descripción del producto.
-Precio del producto.
-Cantidad de existencia del producto.
-Activo o Inactivo
-
-Nota: Se debe validar que el producto no exista, en caso de existir debe permitir aumentar la cantidad de existencias o bien cambiar el estado activando o inactivando el producto.
-
-Los productos deben ser persistentes, no se deben eliminar al cerrar el programa.
-
-"""
-
 arreglo = []
 arreglo_producto = []
 
@@ -132,22 +111,33 @@ def registrar_cliente():
     print("El ID del Usuario es:", id_usuario)
     print("Por favor guarde el ID si desea consultar este usuario en el futuro.")
 
-def agregar_producto(nombre, descripcion, precio):
-    arreglo_producto.append([nombre, descripcion, precio])
+def agregar_producto(nombre, descripcion, precio, id_cliente, aprobacion_administrador):
+    arreglo_producto.append([nombre, descripcion, precio, id_cliente, aprobacion_administrador])
     id_producto = len(arreglo_producto) - 1
     print("ID del Producto:", id_producto)
+    print("Si el cliente listado abajo puede vender este producto oh no quedará a la espera de la aprobación de un administrador.")
+    print(buscar_usuario(id_cliente))
 
 def buscar_producto(id_producto):
     if id_producto >= len(arreglo_producto):
         return print("Eso no es ID de un producto existente.")
     else:
-        return arreglo_producto[id_producto]
+        if arreglo_producto[id_producto,4] == False:
+            return print( "El producto no ha sido aprobado para venta por el administrador", arreglo_producto[id_producto])
+        else:
+            return print ("El producto a ha sido aprobado para venta por el administrador", arreglo_producto[id_producto])
+
+#PENDING
+def carrito_compra(): #PENDING
+    print("PENDING")#PENDING
+    #PENDING
 
 def gestionar_productos():
     print("**** SISTEMA DE GESTION DE PRODUCTOS ****")
-    print("1. Agregar un producto")
-    print("2. Consultar un producto")
-    print("3. Volver al menú principal")
+    print("1. Agregar un producto para venta")
+    print("2. Consultar un producto agregado para venta")
+    print("3. Crear un carrito de compras")
+    print("4. Volver al menú principal")
     
     entrada_producto = input("Ingrese la opción: ")
     
@@ -155,11 +145,15 @@ def gestionar_productos():
         nombre = input("Ingrese el nombre del producto: ")
         descripcion = input("Ingrese la descripción del producto: ")
         precio = float(input("Ingrese el precio del producto: "))
-        agregar_producto(nombre, descripcion, precio)
+        id_cliente = input("Ingrese el id del cliente que desea vender este producto")
+        aprobacion_administrador = False
+        agregar_producto(nombre, descripcion, precio, id_cliente, aprobacion_administrador)
     elif entrada_producto == "2":
         id_producto = int(input("Ingrese un ID de producto para buscar información: "))
         print(buscar_producto(id_producto))
     elif entrada_producto == "3":
+        carrito_compra()
+    elif entrada_producto == "4":
         return
     else:
         print("Entrada no válida. Por favor ingrese una opción válida.")
@@ -192,5 +186,27 @@ while condicion_menu:
         print("Entrada no válida. Por favor ingrese una opción válida.")
 
 print("Programa finalizado.")
+
+
+"""
+Módulo 2: Módulo de Administrador
+
+En este módulo se podrá activar los clientes, aceptar los productos de los clientes que desean vender, registrar 
+los productos propios del local y visualizar las entregas de los transportistas.
+
+La información para el registro de un producto del local debe contener como mínimo los siguientes datos (puede incluir más según se requiere en su análisis):
+
+Identificación del producto.
+Nombre del producto.
+Descripción del producto.
+Precio del producto.
+Cantidad de existencia del producto.
+Activo o Inactivo
+
+Nota: Se debe validar que el producto no exista, en caso de existir debe permitir aumentar la cantidad de existencias o bien cambiar el estado activando o inactivando el producto.
+
+Los productos deben ser persistentes, no se deben eliminar al cerrar el programa.
+
+"""
 
 
