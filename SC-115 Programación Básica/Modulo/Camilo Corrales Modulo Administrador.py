@@ -1,6 +1,5 @@
 #SC-115-Programación Basica
 #Avance 2 del Proyecto
-#Entrega Individual Camilo Corrales
 """
 Descripción General del requerimiento Tienda en línea “Intermediación y Venta de productos”
 
