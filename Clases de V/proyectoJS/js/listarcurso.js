@@ -1,5 +1,8 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
 var apiconsultar = "ListaCurso.php";
+var apieliminar = "BorrarCursos.php";
+
+const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar'));
 
 let tablaresultado = document.querySelector('#tablaresultado');
 
@@ -20,12 +23,6 @@ function consultardatos(){
 function ajustardatostabla(datos){
     console.log("datos"+datos);
     for (const objetoindividual of datos) {
-    //    console.log(objetoindividual.id);
-    //    console.log(objetoindividual.nombre);
-    //    console.log(objetoindividual.descripcion);
-    //    console.log(objetoindividual.tiempo);
-    //    console.log(objetoindividual.usuario);
-    //    console.log("///////////");
 
        tablaresultado.innerHTML += `
             <tr class="table-primary" >
@@ -34,15 +31,44 @@ function ajustardatostabla(datos){
                                 <td>${objetoindividual.descripcion}</td>
                                 <td>${objetoindividual.tiempo}</td>
                                 <td>${objetoindividual.usuario}</td>
-                                <td>---</td>                              
+                                <td>
+                                 <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')"> Eliminar </a>
+                                </td>                              
             </tr>
        `;
     }
+   
+}
+function mostrarModal(id){
+    eliminandodato(id);
 
-
-    // {"id":"3086","nombre":"Api Jul 19","descripcion":"Expres","descripcion":"85","usuario":"Kevin M. VLA"}
-           
+    myModalEliminar.show();
 }
 
+function eliminandodato(id){
+     
+
+    var datosEnviar={ 
+        "id":id 
+    }
+
+    apiurl = apibase + apieliminar ;
+    fetch(apiurl, 
+        { 
+            method: 'POST',
+            body: JSON.stringify(datosEnviar)
+        })
+    .then(estructura => estructura.json())
+    .then((datosrespuesta) => {
+            completeDelete()
+        })
+    .catch(console.log);
+}
+
+function completeDelete(){
+    tablaresultado.innerHTML = ``;
+    consultardatos();
+    myModalEliminar.hide();
+}
 
 consultardatos();
