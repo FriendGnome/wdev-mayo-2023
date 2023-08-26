@@ -1,8 +1,11 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
 var apiconsultar = "ListaCurso.php";
 var apieliminar = "BorrarCursos.php";
+var apieditar = "ActualizarCursos.php";
 
-const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar'));
+const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar')); 
+const myModalEditar = new bootstrap.Modal(document.getElementById('myModalEditar'));
+const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess'));
 
 let tablaresultado = document.querySelector('#tablaresultado');
 
@@ -32,8 +35,11 @@ function ajustardatostabla(datos){
                                 <td>${objetoindividual.tiempo}</td>
                                 <td>${objetoindividual.usuario}</td>
                                 <td>
-                                 <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')"> Eliminar </a>
-                                </td>                              
+                                <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')"> Editar </a> 
+                                ||
+                                <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')"> Eliminar </a>
+                                 
+                                </td>                               
             </tr>
        `;
     }
@@ -72,3 +78,59 @@ function completeDelete(){
 }
 
 consultardatos();
+// //no necesariamente porque paso el objeto significa que el objeto se está pasando en objeto
+// //hay dos maneras convertirlo en un string, en react ayuda. hay que hacerlo a pie
+// //const es lo que estabamos usand para declarar estructuras estan la parte de const y let
+//
+function mostrarEditarModal(id, nombre, descripcion, tiempo){
+    document.getElementById('id').value = id;
+    document.getElementById('nombre').value = nombre;
+    document.getElementById('descripcion').value = descripcion;
+    document.getElementById('tiempo').value = tiempo;
+    console.log(id, nombre, descripcion, tiempo);
+
+
+
+    myModalEditar.show();
+}
+
+
+// formulario.addEventListener('submit', function(e)
+// {
+//     e.preventDefault();
+
+//     var datosEnviar = {
+//         "id":document.getElementById('id').value ,
+//         "nombre":document.getElementById('nombre').value ,
+//         "descripcion":document.getElementById('descripcion').value ,
+//         "tiempo":document.getElementById('tiempo').value ,
+//         "usuario":"Camilo" 
+//     }
+//     console.log(datoseditar);
+    
+//     apiurl = apibase + apieditar ;
+//     fetch(apiurl, 
+//         { 
+//             method: 'POST',
+//             body: JSON.stringify(datosEnviar)
+//         })
+//     .then(estructura => estructura.json())
+//     .then((datosrespuesta) => {
+//             completeEdit()
+//         })
+//     .catch(console.log);
+// });
+
+// function completeEdit(){
+//     myModalEditar.hide();
+//     tablaresultado.innerHTML = ``;
+//     consultardatos();
+//     //window.location = 'listarcurso.html';
+// }
+
+// consultardatos();
+
+
+// //crear una funcion parecida a la de submit
+// //cambiar el metodo insertar por el de editar
+// //crear una funcion similar a completeDelete
