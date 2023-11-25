@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>CrearGrupo</title>
+  <title>CrearUsuario</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,22 +14,35 @@
 </head>
 
 
-  <body>
+<body>
     <div class="container-fluid">
-      <div class="container">
-          <header>
-              <div id="menuprincipal"></div>    
-          </header>
-      </div>
-  
-      <div class="container">
-          <main>
+    <div class="container">
+        <header>
+            <div id="menuprincipal"></div>
+                
+        </header>
+    </div>
+
+    <div class="container">
+        <main>
             <form id="formulario">
                 <div class="mb-3">
-                  <label for="" class="form-label">Nombre</label>
+                  <label for="" class="form-label">Name</label>
                   <input required type="text"
-                    class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingresa el nombre del Grupo">
-                  <small id="helpId" class="form-text text-muted">nombre</small>
+                    class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="Ingresa Name">
+                  <small id="helpId" class="form-text text-muted">Name</small>
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Password</label>
+                  <input required type="text"
+                    class="form-control" name="password" id="password" aria-describedby="helpId" placeholder="Ingresa Password">
+                  <small id="helpId" class="form-text text-muted">password</small>
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">email</label>
+                  <input required type="text"
+                    class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="Ingresa Email"> 
+                  <small id="helpId" class="form-text text-muted">email</small>
                 </div>
                 <button type="reset" class="btn btn-danger">Reset</button>
                 ||
@@ -54,17 +67,18 @@
                   </div>
                 </div>
               </div>
-            </div>  
-          </main>
-      </div>
-  
-      <div class="container">
-          <footer>
-              <div id="footer"></div>
-          </footer>
-      </div>
-  </div>
-  <script src="js/menuCopy.js"></script>
+            </div>   
+        </main>
+    </div>
+
+    <div class="container">
+        <footer>
+            <div id="footer"></div>
+        </footer>
+    </div>
+</div>
+
+  <script src="js/menu.js"></script>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -74,8 +88,7 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
 
-  <script src="js/creargrupo.js"></script>
-
+  <script src="js/crearusuario.js"></script>
 </body>
 
 </html>

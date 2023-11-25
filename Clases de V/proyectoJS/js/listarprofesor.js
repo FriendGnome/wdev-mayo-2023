@@ -1,7 +1,7 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apiconsultar = "ListaEstudiantes.php";
-var apieliminar = "BorrarEstudiantes.php";
-var apieditar = "ActualizarEstudiantes.php";
+var apiconsultar = "ListaProfesores.php";
+var apieliminar = "BorrarProfesores.php";
+var apieditar = "ActualizarProfesores.php";
 
 const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar')); 
 const myModalEditar = new bootstrap.Modal(document.getElementById('myModalEditar'));
@@ -40,11 +40,11 @@ function ajustardatostabla(datos){
                                 <td>${objetoindividual.nombre}</td>
                                 <td>${objetoindividual.apellidopaterno}</td>
                                 <td>${objetoindividual.apellidomaterno}</td>
-                                <td>${objetoindividual.nacionalidad}</td>
                                 <td>${objetoindividual.idCarreras}</td>
                                 <td>${objetoindividual.usuario}</td>
+                                <td>${objetoindividual.nacionalidad}</td>
                                 <td>
-                                <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.cedula}','${objetoindividual.correoelectronico}','${objetoindividual.telefono}','${objetoindividual.telefonocelular}','${objetoindividual.fechanacimiento}','${objetoindividual.sexo}','${objetoindividual.direccion}','${objetoindividual.nombre}','${objetoindividual.apellidopaterno}','${objetoindividual.apellidomaterno}','${objetoindividual.nacionalidad}','${objetoindividual.idCarreras}')"> Editar </a> 
+                                <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.cedula}','${objetoindividual.correoelectronico}','${objetoindividual.telefono}','${objetoindividual.telefonocelular}','${objetoindividual.fechanacimiento}','${objetoindividual.sexo}','${objetoindividual.direccion}','${objetoindividual.nombre}','${objetoindividual.apellidopaterno}','${objetoindividual.apellidomaterno}','${objetoindividual.idCarreras}','${objetoindividual.nacionalidad}')"> Editar </a> 
                                 ||
                                 <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')"> Eliminar </a>
                                 </td>                               
@@ -90,7 +90,7 @@ function completeDelete(){
 
 consultardatos();
 
-function mostrarEditarModal(id, cedula, correoelectronico, telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, nacionalidad, idCarreras){
+function mostrarEditarModal(id, cedula, correoelectronico, telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, idCarreras, nacionalidad){
     document.getElementById('id').value = id;
     document.getElementById('cedula').value = cedula;
     document.getElementById('correoelectronico').value = correoelectronico;
@@ -102,8 +102,8 @@ function mostrarEditarModal(id, cedula, correoelectronico, telefono, telefonocel
     document.getElementById('nombre').value = nombre;
     document.getElementById('apellidopaterno').value = apellidopaterno;
     document.getElementById('apellidomaterno').value = apellidomaterno;
-    document.getElementById('nacionalidad').value = nacionalidad;
     document.getElementById('idCarreras').value = idCarreras;
+    document.getElementById('nacionalidad').value = nacionalidad;
     console.log(id, correoelectronico, telefono, telefonocelular,fechanacimiento, sexo, nombre, apellidopaterno, apellidomaterno, nacionalidad, idCarreras);
 
     myModalEditar.show();
@@ -127,8 +127,8 @@ formulario.addEventListener('submit', function(e)
         "nombre":document.getElementById('nombre').value ,
         "apellidopaterno":document.getElementById('apellidopaterno').value ,
         "apellidomaterno":document.getElementById('apellidomaterno').value ,
-        "nacionalidad":document.getElementById('nacionalidad').value ,
         "idCarreras":document.getElementById('idCarreras').value ,
+        "nacionalidad":document.getElementById('nacionalidad').value ,
         "usuario":"Camilo" 
     }
     

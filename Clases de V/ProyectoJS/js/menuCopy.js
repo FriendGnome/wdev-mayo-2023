@@ -1,7 +1,7 @@
 menuprincipal.innerHTML += `
 <nav class="navbar navbar-expand-lg bg-body-tertiary btn btn-danger">
                     <div class="container-fluid">
-                    <a class="navbar-brand text-white" href="index.html">Página Principal</a>
+                    <a class="navbar-brand text-white" href="IndexPaginaPrincipal.html">Página Principal</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -13,17 +13,6 @@ menuprincipal.innerHTML += `
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Opciones de Listar
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="listarcurso.html">Listar Cursos</a></li>
-                                <li><a class="dropdown-item" href="listarestudiante.html">Listar Estudiantes</a></li>
-                                <li><a class="dropdown-item" href="listargrupo.html"></a>Listar Grupos</li>
-                                <li><a class="dropdown-item" href="listarprofesor.html"></a>Listar Profesores</li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Opciones de Crear
                             </a>
                             <ul class="dropdown-menu">
@@ -31,6 +20,22 @@ menuprincipal.innerHTML += `
                                 <li><a class="dropdown-item" href="crearestudiante.html">Crear Estudiantes</a></li>
                                 <li><a class="dropdown-item" href="creargrupo.html">Crear Grupos</a></li>
                                 <li><a class="dropdown-item" href="crearprofesor.html">Crear Profesores</a></li>
+                            </ul>
+                        </li>
+                        </ul>        
+                        </form>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Opciones de Listar
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="listarcurso.html">Listar Cursos</a></li>
+                                <li><a class="dropdown-item" href="listarestudiante.html">Listar Estudiantes</a></li>
+                                <li><a class="dropdown-item" href="listargrupo.html">Listar Grupos</a></li>
+                                <li><a class="dropdown-item" href="listarprofesor.html">Listar Profesores</a></li>
                             </ul>
                         </li>
                         </ul>        
@@ -46,6 +51,6 @@ footer.innerHTML += `
             <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
           </a>      
           <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Página Principal</a></li>
+            <li class="nav-item"><a href="IndexPaginaPrincipal.html" class="nav-link px-2 text-muted">Página Principal</a></li>
           </ul>
         </footer>`;
